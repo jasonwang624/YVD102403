@@ -21,8 +21,11 @@ public class MainActivity extends AppCompatActivity {
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                TextView itemTv = (TextView) view;
-                String str = itemTv.getText().toString();
+                // TextView itemTv = (TextView) view;
+                // String str = itemTv.getText().toString();
+                String[] f = getResources().getStringArray(R.array.fruits);
+                String str = f[position];
+
                 tv.setText(str);
             }
 
